@@ -23,7 +23,7 @@ ARC参赛项目
 
 系统结构
 
- ![系统结构](photo of readme/1.png)
+ ![系统结构](readmephoto/1.png)
  
 
 软件和硬件设置
@@ -37,7 +37,7 @@ ARC参赛项目
 - 3 SD Card
   硬件和ARC板的接口连接如下： 
   
-![接口图](photo of readme/2.jpg)
+![接口图](readmephoto/2.jpg)
 
 所需软件
 
