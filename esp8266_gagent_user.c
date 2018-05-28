@@ -1,7 +1,9 @@
 
+
+// 定义数据点
+uint8_t 				SN = 1; //可写
+uint8_t 				CR = 2; //可写
 uint8_t 				buf = 0; //站点初始化
-uint8_t 				SN = 0;
-uint8_t 				CR = 0;
 uint8_t 				crow = 0; //拥挤程度初始化
 uint16_t				temp = 0; //只读
 
@@ -99,12 +101,12 @@ void mcu2wifi_wifi_read_dev (void)
 注意：关于发送频率。当设备MCU收到WiFi模组控制产生的状态变化,设备MCU应立刻主动上报
 当前状态,发送频率不受限制。
 但如设备的状态的变化是由于用户触发或环境变化所产生的,其发送的频率不能快于6秒每条。
-建议按需上报，有特殊上报需求请。建议按需上报，有特殊上报需求请联系机智云。
+建议按需上报，有特殊上报需求请联系机智云。
 
 注意：设备MCU需要每隔10分钟定期主动上报当前状态。
 
 */
-void mcu2wifi_dev_report_status (uint8_t SN1, uint8_t CR1)
+void mcu2wifi_dev_report_status (void)
 {
 	uint8_t 				checksum = 0;
 	uint8_t 				send_data[0x0A + DEV_STATUS_BYTES] =
@@ -124,10 +126,10 @@ void mcu2wifi_dev_report_status (uint8_t SN1, uint8_t CR1)
 
 	//设备状态,具体字节长度由DEV_STATUS_BYTES决定
 	// SN
-	send_data[9]				= SN1;
+	send_data[9]				= SN;
 
 	// CR
-	send_data[10] 			= CR1;
+	send_data[10] 			= CR;
 
 	// temp 高位
 	send_data[11] 			= temp % 256;

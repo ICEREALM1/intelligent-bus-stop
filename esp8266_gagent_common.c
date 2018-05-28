@@ -91,8 +91,7 @@ void mcu2wifi_heartbeat (void)
 
 /*
 函数功能：MCU向WiFi发送指令，通知WiFi模组进入配置模式。
-当WiFi模组收到进入配置模式的指令后，让设备进入对应的SoftAP或AirLink等OnBoarding配置方式�
-	��
+当WiFi模组收到进入配置模式的指令后，让设备进入对应的SoftAP或AirLink等OnBoarding配置方式
 参数：mode 配置模式，1为SoftAP方式，2为AirLink方式;
 			配置方式不合法时，默认进入AirLink配置方式，
 			超时时间1分钟。softAp配置，超时时间5分钟
@@ -116,8 +115,8 @@ void mcu2wifi_set_cfg_mode (uint8_t mode)
 	send_data[5]				= ++sn; 											//获取包序号
 
 	/*设置配置方式，1为SoftAP方式，2为AirLink方式;
-	配置方式不合法时，默认进入AirLink配置方式，超时时间1分钟。softAp配置，超时时间5分�
-		�*/
+	配置方式不合法时，默认进入AirLink配置方式，超时时间1分钟。softAp配置，超时时间5分
+	钟*/
 	send_data[8]				= mode;
 
 	//计算校验和（包长度至校验和前一byte所有数据之和对256取余）
