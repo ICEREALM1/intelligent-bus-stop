@@ -36,6 +36,8 @@ ARC参赛项目
 - 2 Infrared radiation module
 - 3 SD Card
   硬件和ARC板的接口连接如下： 
+  
+![接口图](photo/2.jpg)
 
 所需软件
 
