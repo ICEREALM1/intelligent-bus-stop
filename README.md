@@ -23,7 +23,7 @@ ARC参赛项目
 
 系统结构
 
- ![系统结构](photo of readme/1.png)
+ ![系统结构](photo  of readme/1.png)
  
 
 软件和硬件设置
